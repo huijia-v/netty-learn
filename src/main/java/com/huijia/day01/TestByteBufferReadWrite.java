@@ -15,5 +15,13 @@ public class TestByteBufferReadWrite {
         ByteBuffer buffer = ByteBuffer.allocate(10);
 
         buffer.put((byte) 0x61);
+        buffer.put((byte) 0x62);
+        buffer.put(new byte[]{0x63, 0x64, 0x69});
+
+        ByteBufferUtil.debugAll(buffer);
+
+        buffer.get();
+
+
     }
 }
